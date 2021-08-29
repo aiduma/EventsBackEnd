@@ -32,7 +32,7 @@ const crearUsuario = async (req, res = response) => {
         res.status(201).json( {
             ok: true,
             uid: usuario.id,
-            msg: usuario.name,
+            name: usuario.name,
             token
         })        
         
@@ -99,6 +99,8 @@ const revalidarToken = async (req, res = response) => {
 
     res.json( {
         ok: true,
+        uid,
+        name,        
         token
     })
 };
